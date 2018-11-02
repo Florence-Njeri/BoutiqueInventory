@@ -4,8 +4,8 @@
     android:layout_height="match_parent"
     android:layout_margin="16dp"
     android:orientation="vertical">
-    <!--Item name eidt text layout-->
 
+    <!--Item name edit text layout-->
     <android.support.design.widget.TextInputLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
@@ -26,7 +26,9 @@
             style="@style/NewInventoryEditText"
             android:hint="@string/color_number"
             android:inputType="number" />
+
     </android.support.design.widget.TextInputLayout>
+
     <!--Quantity edit text input layout-->
     <android.support.design.widget.TextInputLayout
         android:layout_width="match_parent"
@@ -39,16 +41,16 @@
 
     </android.support.design.widget.TextInputLayout>
 
+    <!--Price edit text layout -->
+
     <android.support.design.widget.TextInputLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
-        <!--Price edit text layout -->
         <android.support.design.widget.TextInputEditText
             style="@style/NewInventoryEditText"
             android:hint="@string/price"
             android:inputType="number" />
     </android.support.design.widget.TextInputLayout>
-
 
     <Button style="@style/Button" />
 
