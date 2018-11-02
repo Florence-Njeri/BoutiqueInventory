@@ -1,5 +1,6 @@
 package com.example.admin.boutiqueinventory;
 
+import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -10,21 +11,21 @@ import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
+import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Button;
 
 public class MainActivity extends AppCompatActivity {
     DrawerLayout mdrawerLayout;
     NavigationView navigationView;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
 
-
-         //Set the toolbar as the action bar
+        //Set the toolbar as the action bar
         mdrawerLayout = findViewById(R.id.drawer_layout);
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
@@ -32,7 +33,7 @@ public class MainActivity extends AppCompatActivity {
         if (getSupportActionBar() != null) {
             assert actionBar != null;
             actionBar.setDisplayHomeAsUpEnabled(true);
-        actionBar.setHomeAsUpIndicator(R.drawable.ic_menu);
+            actionBar.setHomeAsUpIndicator(R.drawable.ic_menu);
         }
 
         /*
@@ -51,6 +52,7 @@ public class MainActivity extends AppCompatActivity {
 
                         // Add code here to update the UI based on the item selected
                         // For example, swap UI fragments here
+
 
                         return true;
                     }
@@ -89,8 +91,18 @@ public class MainActivity extends AppCompatActivity {
             case android.R.id.home:
                 mdrawerLayout.openDrawer(GravityCompat.START);
                 return true;
+            case R.id.search:
 
         }
+
         return super.onOptionsItemSelected(item);
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        //Find the search bar to get Inflated on the toolbar
+        getMenuInflater().inflate(R.menu.search_bar,menu);
+        //return true to display your menu item
+        return true;
     }
 }
