@@ -46,7 +46,7 @@ public class BoutiqueFragment extends Fragment {;
         recyclerView.setAdapter(adapter);
 
         //Instantiate add new list button
-        addNewInventory=view.findViewById(R.id.add_new_inventory);
+        addNewInventory=view.findViewById(R.id.floating_button);
         addNewInventory.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

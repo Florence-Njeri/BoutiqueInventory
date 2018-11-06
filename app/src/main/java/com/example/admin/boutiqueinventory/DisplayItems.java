@@ -6,7 +6,7 @@ public class DisplayItems {
     private int quantity;
     private int price;
 
-    public DisplayItems(String itemName,int colorNo,int quantity,int price){
+    public DisplayItems(String itemName, int colorNo, int quantity, int price){
         this.itemName=itemName;
         this.colorNo=colorNo;
         this.quantity=quantity;
