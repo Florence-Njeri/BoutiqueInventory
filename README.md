@@ -1,2 +1,2 @@
 # BoutiqueInventory
-Add layouts,adapter and navigation drawer
+This is a Boutique Inventory app
