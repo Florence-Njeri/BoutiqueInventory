@@ -14,8 +14,6 @@ import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
-import com.google.firebase.database.DatabaseReference;
-import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.FirebaseFirestore;
 
@@ -24,6 +22,7 @@ import java.util.Map;
 import java.util.Objects;
 
 import butterknife.BindView;
+import butterknife.ButterKnife;
 
 public class AddNewInventory extends AppCompatActivity {
     FirebaseFirestore db = FirebaseFirestore.getInstance();
@@ -45,7 +44,7 @@ public class AddNewInventory extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add_new_inventory);
-
+        ButterKnife.bind(this);
         //OnClick listener for the submit Button
 
         addNewInventory.setOnClickListener(new View.OnClickListener() {
